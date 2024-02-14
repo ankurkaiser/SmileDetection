@@ -7,4 +7,4 @@ opencv-python
 plotly.graph
 numpy 
 pandas
-opencv-python
+opencv-python==4.5.3.56
