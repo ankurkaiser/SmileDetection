@@ -1,0 +1,9 @@
+tensorflow
+streamlit
+altair
+pypyodbc
+streamlit_webrtc
+opencv-python 
+plotly.graph
+numpy 
+pandas
