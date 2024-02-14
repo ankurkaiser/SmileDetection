@@ -7,3 +7,4 @@ opencv-python
 plotly.graph
 numpy 
 pandas
+opencv-python
