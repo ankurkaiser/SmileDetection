@@ -17,7 +17,7 @@ if "component_states" not in st.session_state:
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
 smile_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_smile.xml')
 # Load the pre-trained model for smile detection
-model = load_model(r'D:/Datasets and Projects/Smile Detection/model.h5')
+model = load_model(model.h5')
 
 df = []
 cap = cv2.VideoCapture(0)
@@ -52,7 +52,7 @@ def detect_smile(frame, df,location):
             new_row = {'Timestamp': datetime.now().strftime("%d/%m/%Y %H:%M:%S"), 'Face ID': face_id, 'Happiness Index': happiness_index, 'Location': location}
             df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
             # Save the data to CSV file without truncating the previous data
-            df.to_csv("D:/Datasets and Projects/Smile Detection/happiness_details.csv", mode='a', index=False, header=False)
+            df.to_csv(happiness_details.csv", mode='a', index=False, header=False)
 
             label = "Thanks for Smiling!"
             cv2.putText(frame, label, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 255, 0), 2)
